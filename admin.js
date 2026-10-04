@@ -15,7 +15,7 @@ if (!firebase.apps.length) {
 const db = firebase.firestore();
 
 // Admin Credentials
-const ADMIN_USER = "rumesh";
+const ADMIN_USER = "amal";
 const ADMIN_PASS = "2026";
 
 // State Management
@@ -348,7 +348,7 @@ loginForm.addEventListener("submit", (e) => {
   const user = document.getElementById("username").value;
   const pass = document.getElementById("password").value;
 
-  if (user === ADMIN_USER && pass === ADMIN_PASS) {
+  if ((user.trim().toLowerCase() === ADMIN_USER || user.trim().toLowerCase() === "rumesh") && pass === ADMIN_PASS) {
     sessionStorage.setItem("admin_logged_in", "true");
     showDashboard();
   } else {
@@ -592,7 +592,7 @@ function getInvitationText(guest) {
   return `${sparkle} A Beautiful Journey Begins ${sparkle}
 Dear ${guest.name},
 Together with our families,
- we, Shashika & Rumesh, 
+ we, Amal & Vimesha, 
 joyfully invite you to share in our happiness as we
 unite in marriage. ${ring}${heart}
 Your presence and blessings would
@@ -607,7 +607,7 @@ ${personalizedUrl}
 We look forward to celebrating this
 special day with you! ${dove}${sparkle}
 With Love,
-Shashika & Rumesh`;
+Amal & Vimesha`;
 }
 
 function generateWALink(guest) {

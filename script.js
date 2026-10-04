@@ -430,7 +430,7 @@ window.addEventListener('scroll', () => {
 // ==========================================
 // 4. COUNTDOWN TIMER
 // ==========================================
-const WEDDING_DATE = new Date('2026-09-13T17:30:00').getTime();
+const WEDDING_DATE = new Date('2026-10-21T09:00:00').getTime();
 const circumference = 2 * Math.PI * 54; // 339.3
 
 function updateRing(progressEl, value, max) {
@@ -559,7 +559,7 @@ function checkPersonalization() {
         // Update Splash Screen Greeting
         const splashGreeting = document.getElementById('splashGreeting');
         if (splashGreeting) {
-            splashGreeting.innerHTML = `Shashika & Rumesh joyfully invite<br><span class="guest-highlight">${guestInfo.name}</span><br>to witness their union`;
+            splashGreeting.innerHTML = `Vimesha & Amal joyfully invite<br><span class="guest-highlight">${guestInfo.name}</span><br>to witness their union`;
         }
 
     }
@@ -735,7 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initBackgroundMusic();
     initInvitationDownload();
-    console.log('🎉 Rumesh & Shashika Wedding Invitation Loaded');
+    console.log('🎉 Amal & Vimesha Wedding Invitation Loaded');
 });
 
 // ==========================================
@@ -754,7 +754,7 @@ function initInvitationDownload() {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = 'invitation.jpeg';
-        a.download = 'Rumesh_Shashika_Invitation.jpeg';
+        a.download = 'Amal_Vimesha_Invitation.jpeg';
         document.body.appendChild(a);
 
         setTimeout(() => {

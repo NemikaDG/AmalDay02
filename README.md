@@ -37,7 +37,7 @@ In `index.html`:
 In `script.js`:
 - Line 3: Change the date in `startCountdown()` function to your wedding date
 ```javascript
-const weddingDate = new Date('June 15, 2024 18:00:00').getTime();
+const weddingDate = new Date('2026-10-21T09:00:00').getTime();
 ```
 
 ### Update Venue Information
