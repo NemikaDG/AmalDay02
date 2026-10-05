@@ -1,11 +1,12 @@
 // Firebase Configuration
 const firebaseConfig = {
-  projectId: "wedding-rsvp-data-2026",
-  appId: "1:670163167459:web:a37db38802c62d92c07dd6",
-  storageBucket: "wedding-rsvp-data-2026.firebasestorage.app",
-  apiKey: "AIzaSyBbDYpdwCiQDwekiAokqSa_3KgmU81rdTI",
-  authDomain: "wedding-rsvp-data-2026.firebaseapp.com",
-  messagingSenderId: "670163167459",
+  apiKey: "AIzaSyCBQGaBwIWqUvceWVe66aQMB-sVM51eWG0",
+  authDomain: "amalday02-d42f1.firebaseapp.com",
+  projectId: "amalday02-d42f1",
+  storageBucket: "amalday02-d42f1.firebasestorage.app",
+  messagingSenderId: "116913219062",
+  appId: "1:116913219062:web:e0a41d313935a2aeb8d3d7",
+  measurementId: "G-115KMXZSQT"
 };
 
 // Initialize Firebase
@@ -22,7 +23,7 @@ const ADMIN_PASS = "2026";
 let guests = JSON.parse(localStorage.getItem("wedding_guests")) || [];
 let selectedGuests = new Set();
 const invitationMessage =
-  "Hi! We're so excited to invite you to our wedding. Please find all the details and RSVP here: ";
+  "Hi! We're so excited to invite you to our homecoming. Please find all the details and RSVP here: ";
 const rawBasePath = window.location.href.split(/\/guestmanagement(\.html)?/i)[0].replace(/\/$/, "");
 const isProductionHost = window.location.hostname.includes("vercel.app") || window.location.hostname.includes("github.io");
 const BASE_URL = (isProductionHost && rawBasePath) ? `${rawBasePath}/` : "https://amalvimesha-wedding-invitation.vercel.app/";
@@ -1190,7 +1191,7 @@ document.getElementById("exportExcelBtn").addEventListener("click", () => {
   });
 
   const summaryData = [
-    ["Wedding Guest List - Dashboard Summary"],
+    ["Homecoming Guest List - Dashboard Summary"],
     ["Generated on:", new Date().toLocaleString()],
     [],
     ["Metric", "Count"],

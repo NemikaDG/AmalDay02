@@ -1,14 +1,14 @@
 :root {
-    --gold: #c9a96e;
-    --gold-dark: #a68b4c;
-    --mocha: #4a2c0e;
-    --mocha-light: #6b4d2e;
+    --gold: #d4af37;
+    --gold-dark: #9e7428;
+    --mocha: #550c0c;
+    --mocha-light: #870f0f;
     --white: #ffffff;
-    --cream: #f9f5f0;
-    --cream-dark: #f0e6d6;
-    --text-dark: #2d1810;
-    --text-mid: #5c4a3d;
-    --shadow: 0 10px 40px rgba(0,0,0,0.1);
+    --cream: #faf5f3;
+    --cream-dark: #f5eae7;
+    --text-dark: #220303;
+    --text-mid: #550c0c;
+    --shadow: 0 10px 40px rgba(34, 3, 3, 0.1);
     --green: #27ae60;
     --grey: #bdc3c7;
 }
@@ -58,7 +58,7 @@ body.admin-body {
 .overlay {
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, var(--mocha) 0%, #2d1810 100%);
+    background: linear-gradient(135deg, var(--mocha) 0%, #160307 100%);
     display: flex;
     align-items: center;
     justify-content: center;

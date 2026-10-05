@@ -3,12 +3,13 @@
 // ==========================================
 // Firebase Configuration
 const firebaseConfig = {
-  projectId: "wedding-rsvp-data-2026",
-  appId: "1:670163167459:web:a37db38802c62d92c07dd6",
-  storageBucket: "wedding-rsvp-data-2026.firebasestorage.app",
-  apiKey: "AIzaSyBbDYpdwCiQDwekiAokqSa_3KgmU81rdTI",
-  authDomain: "wedding-rsvp-data-2026.firebaseapp.com",
-  messagingSenderId: "670163167459",
+  apiKey: "AIzaSyCBQGaBwIWqUvceWVe66aQMB-sVM51eWG0",
+  authDomain: "amalday02-d42f1.firebaseapp.com",
+  projectId: "amalday02-d42f1",
+  storageBucket: "amalday02-d42f1.firebasestorage.app",
+  messagingSenderId: "116913219062",
+  appId: "1:116913219062:web:e0a41d313935a2aeb8d3d7",
+  measurementId: "G-115KMXZSQT"
 };
 
 // Initialize Firebase
@@ -144,10 +145,14 @@ function initBackgroundMusic() {
     var MAX_PILE = 60;    // max petals in the footer pile
     var MAX_TOTAL = 130;    // absolute safety cap
 
-    /* ── Colour palette ──────────────────── */
+    /* ── Colour palette (#870f0f theme) ──────────────────── */
     var PAL = [
-        [180, 10, 28], [212, 22, 46], [195, 28, 52],
-        [225, 42, 60], [163, 8, 24], [205, 18, 44],
+        [135, 15, 15], // Exact #870f0f
+        [145, 18, 18], // Rich velvet tone
+        [125, 12, 12], // Deep tone
+        [135, 15, 15], // Exact #870f0f
+        [150, 20, 20], // Subtle luminous edge
+        [118, 10, 10], // Deep contour
     ];
 
     /* ── Resize ──────────────────────────── */
@@ -172,7 +177,7 @@ function initBackgroundMusic() {
             rv: (Math.random() - 0.5) * 0.05,
             pw: pw, ph: ph,
             r: c[0], g: c[1], b: c[2],
-            a: 0.55 + Math.random() * 0.40,
+            a: 0.70 + Math.random() * 0.25,
             wob: Math.random() * 6.2832,
             wobs: 0.016 + Math.random() * 0.022,
             landed: false,
@@ -201,13 +206,13 @@ function initBackgroundMusic() {
             }
         }
 
-        /* gradient context */
+        /* gradient context matching #870f0f */
         var gr = ctx.createRadialGradient(
             -w * 0.22, -h * 0.55, h * 0.04,
             0, -h * 0.40, h * 0.58);
-        gr.addColorStop(0, 'rgba(' + Math.min(r + 70, 255) + ',' + Math.min(g + 40, 255) + ',' + Math.min(b + 50, 255) + ',' + a + ')');
+        gr.addColorStop(0, 'rgba(' + Math.min(r + 28, 170) + ',' + Math.min(g + 10, 30) + ',' + Math.min(b + 10, 30) + ',' + a + ')');
         gr.addColorStop(0.5, 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')');
-        gr.addColorStop(1, 'rgba(' + Math.max(r - 55, 0) + ',0,0,' + (a * 0.5) + ')');
+        gr.addColorStop(1, 'rgba(' + Math.max(r - 45, 40) + ',4,4,' + (a * 0.7) + ')');
 
         ctx.beginPath();
         ctx.moveTo(0, 0);
@@ -430,7 +435,7 @@ window.addEventListener('scroll', () => {
 // ==========================================
 // 4. COUNTDOWN TIMER
 // ==========================================
-const WEDDING_DATE = new Date('2026-10-21T09:00:00').getTime();
+const WEDDING_DATE = new Date('2026-10-23T18:30:00').getTime();
 const circumference = 2 * Math.PI * 54; // 339.3
 
 function updateRing(progressEl, value, max) {

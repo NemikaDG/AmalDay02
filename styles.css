@@ -8,21 +8,40 @@
 }
 
 :root {
-    --gold: #c9a96e;
-    --gold-light: #e8d5a3;
-    --gold-dark: #a07840;
-    --brown: #7a4a25;
-    --brown-dark: #4a2c0e;
-    --cream: #fdf8f0;
-    --cream-dark: #f5ede0;
+    /* Luxury Gold Palette */
+    --gold: #d4af37;
+    --gold-light: #f5e7c8;
+    --gold-dark: #9e7428;
+    --gold-shimmer: #e8c872;
+    --gold-gradient: linear-gradient(135deg, #f5e7c8 0%, #d4af37 50%, #9e7428 100%);
+
+    /* Dark Luxury Red Palette (#870f0f) */
+    --red: #870f0f;
+    --red-dark: #450808;
+    --red-deep: #240404;
+    --red-mid: #680b0b;
+    --red-light: #ab1717;
+    --red-velvet: #6b0c0c;
+
+    /* Theme Aliases for compatibility */
+    --brown: var(--red);
+    --brown-dark: var(--red-dark);
+
+    /* Romantic Cozy Backgrounds & Accents */
+    --cream: #faf5f3;
+    --cream-dark: #f5eae7;
     --white: #ffffff;
-    --text-dark: #2d1810;
-    --text-mid: #6b4c2a;
-    --text-light: #a07840;
-    --rose: #d4847a;
-    --rose-light: #edd5d0;
-    --shadow-gold: rgba(201, 169, 110, 0.3);
-    --shadow-dark: rgba(45, 24, 16, 0.15);
+    --text-dark: #220303;
+    --text-mid: #550c0c;
+    --text-light: #a0743b;
+    --rose: #b82d44;
+    --rose-light: #faebee;
+
+    /* Luxury Glow & Shadows */
+    --shadow-gold: rgba(212, 175, 55, 0.35);
+    --shadow-dark: rgba(34, 3, 3, 0.18);
+    --shadow-red: rgba(135, 15, 15, 0.32);
+
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-cursive: 'Cormorant Garamond', serif;
     --font-sans: 'Poppins', sans-serif;
@@ -57,12 +76,12 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #d4a574 0%, #c9945a 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #9e7428 100%);
     border: none;
     color: white;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -71,7 +90,7 @@ body {
 
 .music-toggle-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
 
 .music-toggle-btn:active {
@@ -211,7 +230,7 @@ body {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background-image: linear-gradient(155deg, rgba(45,24,16,0.6) 0%, rgba(74,44,20,0.4) 40%, rgba(26,15,8,0.85) 100%), url('parallax-bg.jpg');
+    background-image: linear-gradient(155deg, rgba(46,6,6,0.82) 0%, rgba(135,15,15,0.58) 40%, rgba(20,2,2,0.92) 100%), url('parallax-bg.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -483,6 +502,7 @@ body {
 }
 
 .ring-progress {
+    stroke: var(--red);
     transition: stroke-dashoffset 1s linear;
 }
 
@@ -499,7 +519,7 @@ body {
     font-family: var(--font-serif);
     font-size: 2.4rem;
     font-weight: 700;
-    color: var(--brown);
+    color: var(--red);
     line-height: 1;
     transition: transform 0.3s ease;
 }
@@ -512,8 +532,8 @@ body {
     font-size: 0.65rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 600;
+    color: var(--red);
+    font-weight: 700;
     margin-top: 4px;
 }
 
@@ -706,7 +726,7 @@ body {
    ========================================= */
 .venue-section {
     padding: 90px 5%;
-    background: linear-gradient(155deg, var(--brown-dark) 0%, var(--brown) 60%, #5a3418 100%);
+    background: linear-gradient(155deg, var(--red-dark) 0%, var(--red-mid) 50%, var(--red-deep) 100%);
 }
 
 .venue-container {
@@ -720,12 +740,12 @@ body {
 }
 
 .venue-details-card {
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(201,169,110,0.2);
+    border: 1px solid rgba(212,175,55,0.35);
     border-radius: var(--radius-lg);
     padding: 40px 36px;
-    color: #4a2c0e;
+    color: var(--text-dark);
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -747,14 +767,14 @@ body {
 .venue-name {
     font-family: var(--font-serif);
     font-size: 1.8rem;
-    color: #4a2c0e;
+    color: var(--red);
     margin-bottom: 6px;
 }
 
 .venue-tagline {
     font-family: var(--font-cursive);
     font-style: italic;
-    color: #4a2c0e;
+    color: var(--text-mid);
     font-size: 0.95rem;
     margin-bottom: 28px;
     opacity: 0.85;
@@ -792,13 +812,13 @@ body {
     font-size: 0.7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #4a2c0e;
+    color: var(--red);
     margin-bottom: 3px;
 }
 
 .venue-info-item p {
     font-size: 0.88rem;
-    color: #4a2c0e;
+    color: var(--text-mid);
     line-height: 1.5;
 }
 
@@ -976,14 +996,14 @@ body {
     position: relative;
     padding: 100px 5%;
     text-align: center;
-    background: linear-gradient(135deg, rgba(74,44,14,0.85) 0%, rgba(122,74,37,0.85) 100%);
+    background: linear-gradient(135deg, rgba(55,6,6,0.93) 0%, rgba(135,15,15,0.88) 100%);
     overflow: hidden;
 }
 
 .cta-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(201,169,110,0.12) 0%, transparent 60%);
+    background: radial-gradient(circle at center, rgba(212,175,55,0.18) 0%, transparent 65%);
     pointer-events: none;
 }
 
@@ -1225,7 +1245,7 @@ body {
    FOOTER
    ========================================= */
 .footer {
-    background: linear-gradient(135deg, var(--brown-dark) 0%, #2d1810 100%);
+    background: linear-gradient(135deg, #240404 0%, #120202 100%);
     color: var(--white);
     padding: 60px 5% 40px;
     text-align: center;
@@ -2068,7 +2088,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: 99999;
-    background: linear-gradient(155deg, #2d1810 0%, #1a0f0a 100%);
+    background: linear-gradient(155deg, #450808 0%, #170202 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2233,7 +2253,7 @@ body.locked {
 
 .liquid-blob {
     position: absolute;
-    background: #2d1810; /* Same as splash background */
+    background: #450808; /* Same as splash background */
     border-radius: 50%;
     width: 10px;
     height: 10px;
