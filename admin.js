@@ -23,8 +23,9 @@ let guests = JSON.parse(localStorage.getItem("wedding_guests")) || [];
 let selectedGuests = new Set();
 const invitationMessage =
   "Hi! We're so excited to invite you to our wedding. Please find all the details and RSVP here: ";
-const basePath = window.location.href.split(/\/guestmanagement(\.html)?/i)[0];
-const BASE_URL = basePath + "/index.html";
+const rawBasePath = window.location.href.split(/\/guestmanagement(\.html)?/i)[0].replace(/\/$/, "");
+const isProductionHost = window.location.hostname.includes("vercel.app") || window.location.hostname.includes("github.io");
+const BASE_URL = (isProductionHost && rawBasePath) ? `${rawBasePath}/` : "https://amalvimesha-wedding-invitation.vercel.app/";
 
 // Undo / Redo Management
 const MAX_HISTORY = 5;
@@ -603,7 +604,9 @@ ${dressCodeMsg}
 Please click the link below to view
 your personalized invitation:
 ${down}${down}${down}
+
 ${personalizedUrl}
+
 We look forward to celebrating this
 special day with you! ${dove}${sparkle}
 With Love,
