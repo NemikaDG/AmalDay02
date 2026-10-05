@@ -26,7 +26,7 @@ const invitationMessage =
   "Hi! We're so excited to invite you to our homecoming. Please find all the details and RSVP here: ";
 const rawBasePath = window.location.href.split(/\/guestmanagement(\.html)?/i)[0].replace(/\/$/, "");
 const isProductionHost = window.location.hostname.includes("vercel.app") || window.location.hostname.includes("github.io");
-const BASE_URL = (isProductionHost && rawBasePath) ? `${rawBasePath}/` : "https://amalvimesha-wedding-invitation.vercel.app/";
+const BASE_URL = (isProductionHost && rawBasePath) ? `${rawBasePath}/` : "https://amalday02.vercel.app/";
 
 // Undo / Redo Management
 const MAX_HISTORY = 5;
@@ -595,8 +595,8 @@ function getInvitationText(guest) {
 Dear ${guest.name},
 Together with our families,
  we, Amal & Vimesha, 
-joyfully invite you to share in our happiness as we
-unite in marriage. ${ring}${heart}
+joyfully invite you to celebrate our
+Homecoming. ${ring}${heart}
 Your presence and blessings would
 mean the world to us as we step
 into this new chapter of our lives.
