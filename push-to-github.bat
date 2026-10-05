@@ -3,8 +3,8 @@ set "PATH=C:\Program Files\Git\cmd;C:\Program Files\Git\ucrt64\bin;%PATH%"
 cd /d "%~dp0"
 
 echo ========================================================
-echo Pushing Amal ^& Vimesha Wedding Invitation to GitHub...
-echo Repository: https://github.com/NemikaDG/Amal_Vimesha-Wedding-Invitation
+echo Pushing Amal ^& Vimesha Homecoming Invitation to GitHub...
+echo Repository: https://github.com/NemikaDG/AmalDay02
 echo Branch: main
 echo ========================================================
 echo.
