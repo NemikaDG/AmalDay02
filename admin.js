@@ -345,10 +345,10 @@ function checkLocalRSVPs() {
 // Authentication
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const user = document.getElementById("username").value;
-  const pass = document.getElementById("password").value;
+  const user = document.getElementById("username").value.trim().toLowerCase();
+  const pass = document.getElementById("password").value.trim();
 
-  if ((user.trim().toLowerCase() === ADMIN_USER || user.trim().toLowerCase() === "rumesh") && pass === ADMIN_PASS) {
+  if (user === ADMIN_USER && pass === ADMIN_PASS) {
     sessionStorage.setItem("admin_logged_in", "true");
     showDashboard();
   } else {
